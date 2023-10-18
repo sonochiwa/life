@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /*sizes*/
+    --board-size: 885px;
+    --cell-size: 25px;
+
+    /*colors */
+    --board-color: #000000;
+    --board-grid: #171717;
+    --green: #00ff00;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: calc(50vh - var(--board-size) / 2);
+}
+
+.board {
+    display: flex;
+    padding: 5px;
+    gap: 3px;
+    width: var(--board-size);
+    height: var(--board-size);
+    background-color: var(--board-color);
+}
+
+/*.board-grid {*/
+/*    background-color: ;*/
+/*}*/
+
+
+.cell {
+    width: 19px;
+    height: 19px;
+    background-image: url("assets/images/cell.png");
+    background-size: 19px 19px;
+    display: grid;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
