@@ -6,27 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="./assets/css/reset.css"/>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/main.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Игра - жизнь</title>
 </head>
 
 <body>
 <div class="container">
-    <div class="board">
+    <div class="board blur">
         <div class="grid-y"></div>
         <div class="grid-x"></div>
     </div>
-    <form style="margin-left: 30px; margin-top: -15px">
-        <div class="form-text" id="basic-addon4">Сгенерировать клетки</div>
+    <form style="margin-left: 30px; margin-top: -10px">
+        <h1>Поколение: <span id="generation">0</span></h1>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Соотношение (1-10)" aria-label="Username"
-                   aria-describedby="basic-addon1">
-            <button type="button" class="btn btn-primary">Сгенерировать</button>
+            <label for="customRange" class="form-label">Задать вероятность появления клетки (1-10)</label>
+            <input type="range" class="form-range" min="1" max="10" value="3" id="customRange">
         </div>
+        <button type="button" class="btn btn-primary" id="gen" onclick="generate()">Сгенерировать клетки</button>
+        <button type="button" class="btn btn-success disabled" id="st" onclick="start()">Начать</button>
+        <button type="button" class="btn btn-danger disabled" id="sp" onclick="stop()">Остановить</button>
     </form>
 </div>
+
+<script src="./assets/js/bootstrap.min.js"></script>
 <script src="./assets/js/app.js"></script>
 </body>
 
