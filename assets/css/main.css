@@ -22,8 +22,8 @@
 }
 
 .board {
-    height: var(--board-height);
-    width: var(--board-width);
+    min-height: var(--board-height);
+    min-width: var(--board-width);
     background-color: var(--dark-gray);
     display: grid;
     grid-template-columns: repeat(24, 1fr);
@@ -37,8 +37,7 @@
     flex-direction: row;
 }
 
-.line-y+.line-y {
-    z-index: 999;
+.line-y {
     margin-left: 22px;
     height: var(--board-height);
     width: 1px;
@@ -51,8 +50,7 @@
     flex-direction: column;
 }
 
-.line-x+.line-x {
-    z-index: 999;
+.line-x {
     margin-top: 22px;
     width: var(--board-height);
     height: 1px;
@@ -61,8 +59,8 @@
 
 .cell {
     margin: 2px;
-    width: 19px;
-    height: 19px;
+    width: 18px;
+    height: 18px;
 }
 
 .living {
