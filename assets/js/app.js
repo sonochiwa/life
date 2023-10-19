@@ -109,6 +109,9 @@ function start() {
     const start = document.getElementById('st')
     start.classList.add('disabled')
 
+    const next = document.getElementById('nxt')
+    next.classList.remove('disabled')
+
     const stop = document.getElementById('sp')
     stop.classList.remove('disabled')
 
@@ -120,6 +123,9 @@ function stop() {
 
     const start = document.getElementById('st')
     start.classList.remove('disabled')
+
+    const next = document.getElementById('nxt')
+    next.classList.add('disabled')
 
     const stop = document.getElementById('sp')
     stop.classList.add('disabled')
