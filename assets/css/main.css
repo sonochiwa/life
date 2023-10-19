@@ -4,41 +4,71 @@
 
 :root {
     /*sizes*/
-    --board-size: 885px;
+    --board-height: 552px;
+    --board-width: 552px;
     --cell-size: 25px;
 
     /*colors */
-    --board-color: #000000;
-    --board-grid: #171717;
+    --black: #000000;
     --green: #00ff00;
+    --dark-gray: #171717;
+    --light-gray: #555555;
 }
 
 .container {
     display: flex;
     justify-content: center;
-    padding-top: calc(50vh - var(--board-size) / 2);
+    padding-top: calc(50vh - var(--board-height) / 2);
 }
 
 .board {
-    display: flex;
-    padding: 5px;
-    gap: 3px;
-    width: var(--board-size);
-    height: var(--board-size);
-    background-color: var(--board-color);
+    height: var(--board-height);
+    width: var(--board-width);
+    background-color: var(--dark-gray);
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    outline: 7px solid black;
 }
 
-/*.board-grid {*/
-/*    background-color: ;*/
-/*}*/
+.grid-y {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
 
+.line-y+.line-y {
+    z-index: 999;
+    margin-left: 22px;
+    height: var(--board-height);
+    width: 1px;
+    background-color: var(--light-gray);
+}
+
+.grid-x {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.line-x+.line-x {
+    z-index: 999;
+    margin-top: 22px;
+    width: var(--board-height);
+    height: 1px;
+    background-color: var(--light-gray);
+}
 
 .cell {
+    margin: 2px;
     width: 19px;
     height: 19px;
-    background-image: url("assets/images/cell.png");
-    background-size: 19px 19px;
-    display: grid;
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
+}
+
+.living {
+    background-image: url("../images/living-cell.png");
+}
+
+.dead {
+    background-image: url("../images/dead-cell.png");
 }
