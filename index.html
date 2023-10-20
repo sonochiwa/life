@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./assets/css/reset.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/main.css"/>
+    <link rel="stylesheet" href="./assets/css/main.css">
     <title>Игра - жизнь</title>
 </head>
 
@@ -24,10 +24,19 @@
             <input type="range" class="form-range" min="1" max="10" value="3" id="customRange">
         </div>
         <button type="button" class="btn btn-primary" id="gen" onclick="generate()">Сгенерировать клетки</button>
-        <button type="button" class="btn btn-success disabled" id="st" onclick="start()">Начать</button>
         <button type="button" class="btn btn-success disabled" id="nxt" onclick="next()">Дальше</button>
-        <button type="button" class="btn btn-danger disabled" id="sp" onclick="stop()">Остановить</button>
     </form>
+</div>
+
+<div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <strong class="me-auto">Игра - жизнь</strong>
+        <small>Сейчас</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+        Эволюция клеток завершена
+    </div>
 </div>
 
 <script src="./assets/js/bootstrap.min.js"></script>
