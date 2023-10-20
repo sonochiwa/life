@@ -179,11 +179,11 @@ function next() {
     const newBoard = calculateNextGeneration(boardArr);
 
     if (getBoardHash(boardArr) === getBoardHash(newBoard)) {
-        const toast = document.getElementById('toast');
-        new bootstrap.Toast(toast).show();
-
         const next = document.getElementById('nxt');
         next.classList.add('disabled');
+
+        const toast = document.getElementById('toast');
+        new bootstrap.Toast(toast).show();
     } else {
         const generation = document.getElementById('generation');
         generation.textContent = String(Number(generation.textContent) + 1);

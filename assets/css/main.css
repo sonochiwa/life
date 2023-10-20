@@ -82,7 +82,8 @@
 }
 
 .toast {
+    z-index: 999;
     position: absolute;
-    top: 100px;
-    left: calc(50% - 348px / 2)
+    top: 10px;
+    right: 10px;
 }
