@@ -193,3 +193,5 @@ function next() {
         boardArr = newBoard;
     }
 }
+
+module.exports = countLivingNeighbors;
